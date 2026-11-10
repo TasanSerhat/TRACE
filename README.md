@@ -1,5 +1,7 @@
 # TRACE
 
+![CI](https://github.com/TasanSerhat/TRACE/actions/workflows/ci.yml/badge.svg)
+
 **Tamper-Resistant Record Audit & Cross-source Evidence Engine**: an audit engine for safety-critical event records, using a hash chain, signed Merkle checkpoints and cross-source consistency analysis. Case study: flight data (simulated).
 
 - Design and requirements: [ARCHITECTURE.md](ARCHITECTURE.md) (source: `docs/TRACE_Feasibility_Report_v4_EN.docx`)
