@@ -1,7 +1,6 @@
 """Immutable data objects passed between layers (ARCHITECTURE.md Sections 3.1, 4.3, 4.6)."""
 
 from dataclasses import dataclass
-from typing import Dict, Optional
 
 from .codes import FindingCode
 
@@ -11,7 +10,7 @@ class InternalRecord:
     sequence_no: int
     timestamp: float  # epoch seconds
     source_id: str  # e.g. "FDR", "TELEMETRY", "NAVIGATION"
-    data: Dict[str, float]  # e.g. {"altitude_ft": 10020.0, "speed_kt": 445.0}
+    data: dict[str, float]  # e.g. {"altitude_ft": 10020.0, "speed_kt": 445.0}
     prev_hash: str
     hash: str
 
@@ -34,8 +33,8 @@ class AuditFinding:
     start_seq: int
     end_seq: int
     event_timestamp: float
-    expected_value: Optional[str]
-    observed_value: Optional[str]
+    expected_value: str | None
+    observed_value: str | None
     message: str
 
 

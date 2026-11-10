@@ -20,7 +20,8 @@ pytest
 We use a simple model: **`main` + short-lived feature branches**. There is no `development` branch.
 
 - `main` is stable and is the default branch. Nobody pushes to it directly; changes arrive only via Pull Request.
-- Each member has a long-running feature branch for their area (see the table in the README):
+- Each member works on one long-running feature branch for their area (see the table in the README).
+Do not create extra branches per change; just keep committing to your own branch:
   - `feat/sim-and-integrity` (Member 1)
   - `feat/continuity-and-consistency` (Member 2)
   - `feat/ingestion-and-orchestrator` (Member 3)
@@ -66,6 +67,9 @@ Keep commits small and commit often.
 The project manager checks `main`'s history and the PRs to follow progress, so keep titles and descriptions meaningful.
 
 ## 5. Code rules (from ARCHITECTURE.md, Section 4)
+
+**Start here:** [docs/SHARED_FORMATS.md](docs/SHARED_FORMATS.md) defines the hash rule, file formats and the
+function each module must expose. Follow it exactly so our parts fit together.
 
 - Folder layout is `src/trace_engine/<layer>/`. Layer order: `presentation` -> `application` -> `domain` -> `data`.
   A lower layer never imports an upper layer.
