@@ -1,0 +1,7 @@
+{
+  "checkpoint_interval_n": 100,
+  "public_key_hex": "",
+  "clock_skew_ms": 500.0,
+  "altitude_tolerance_ft": 50.0,
+  "speed_tolerance_kt": 5.0
+}
